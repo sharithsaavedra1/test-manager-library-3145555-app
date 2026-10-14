@@ -26,8 +26,8 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('books');
 
   // Login form state
-  const [loginUser, setLoginUser] = useState('admin');
-  const [loginPass, setLoginPass] = useState('AdminPassword123!');
+  const [loginUser, setLoginUser] = useState('');
+  const [loginPass, setLoginPass] = useState('');
   const [loginError, setLoginError] = useState('');
   const [loginLoading, setLoginLoading] = useState(false);
 
@@ -114,11 +114,6 @@ export default function App() {
               {loginLoading ? 'Ingresando...' : 'Iniciar Sesión'}
             </button>
           </form>
-
-          <div style={{ marginTop: '24px', padding: '12px', background: '#f8fafc', borderRadius: '8px', fontSize: '0.75rem', color: '#64748b' }}>
-            <strong>Credenciales por defecto:</strong><br />
-            Admin: <code>admin</code> / <code>AdminPassword123!</code>
-          </div>
         </div>
       </div>
     );
